@@ -1,0 +1,136 @@
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --primary-orange: hsl(25, 97%, 53%);
+  --neutral-lightGrey: #959eac;
+  --neutral-mediumGrey: #7c8798;
+  --neutral-darkBlue: hsl(212, 20%, 25%);
+  --neutral-darkerBlue: hsl(213, 19%, 18%);
+  --neutral-darkestBlue: hsl(216, 12%, 8%);
+  --neutral-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --fontSize-title: 1.5rem;
+  --fontSize-body: 0.9rem;
+  --fontSize-btn: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-darkestBlue);
+}
+.card-container {
+  width: 22rem;
+  background: var(--neutral-darkerBlue);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card-container.rate {
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-container.thank {
+  display: none;
+  text-align: center;
+}
+.card-container.thank span svg {
+  display: block;
+  margin: 0.5rem auto;
+}
+.card-container.thank .result {
+  margin: 0 auto;
+  background-color: transparent;
+  border-radius: 1rem;
+  color: var(--primary-orange);
+  padding: 0.5rem 1rem;
+  box-shadow: inset 0px 0px 24px var(--neutral-darkBlue);
+  font-size: var(--fontSize-body);
+  font-weight: 400;
+}
+.rate-result {
+  font-weight: 700;
+}
+.star,
+.rating-numbers button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 24px var(--neutral-darkBlue);
+}
+
+h4 {
+  color: var(--neutral-white);
+  font-size: var(--fontSize-title);
+  font-weight: 700;
+}
+p {
+  font-size: var(--fontSize-body);
+  color: var(--neutral-lightGrey);
+  line-height: 1.5;
+}
+.rating-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.rating-numbers button {
+  margin: 0.5rem 0;
+  cursor: pointer;
+  color: var(--neutral-lightGrey);
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.rating-numbers button:hover {
+  background-color: var(--primary-orange);
+  color: var(--neutral-white);
+  box-shadow: none;
+}
+.rating-numbers button:focus {
+  background-color: var(--neutral-mediumGrey);
+  color: var(--neutral-white);
+}
+.btn {
+  width: 100%;
+  height: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  padding: 0.6rem;
+  font-size: var(--fontSize-btn);
+  color: var(--neutral-white);
+  background-color: var(--primary-orange);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.6s;
+  cursor: not-allowed;
+}
+.hovered:hover {
+  background-color: var(--neutral-white);
+  color: var(--primary-orange);
+  border: 0.125rem solid var(--primary-orange);
+}
